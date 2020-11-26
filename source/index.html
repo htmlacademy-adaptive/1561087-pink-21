@@ -2,42 +2,44 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="logo" href="#"><img src="img/logo.svg" width="74" height="23" alt="логотип сайта pink"></a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item"><a href="#">Главная</a></li>
-            <li class="main-nav__item"><a href="#">Фотографии</a></li>
-            <li class="main-nav__item"><a href="#">конкурс</a></li>
-            <li class="main-nav__item"><a href="#">html academy</a></li>
-        </ul>
-      </div>
-      </nav>
-      <section class="application">
-        <p class="application__intro">Взгляните на жизнь иначе!</p>
-        <a class="application__link" href="#">Скачать приложение</a>
-        <div class="application__links-platform">
-          <ul class="links-platform__list">
-            <li class="links-platform__item"><a href="#">ios</a></li>
-            <li class="links-platform__item"><a href="#">android</a></li>
-            <li class="links-platform__item"><a href="#">windows</a></li>
-          </ul>
+      <div class="page-header__wrapper">
+        <div class="page-header__head">
+          <a class="logo" href="#"><img src="img/logo.svg" width="74" height="23" alt="логотип сайта pink"></a>
+          <nav class="main-nav">
+            <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+              <ul class="main-nav__list">
+                <li class="main-nav__item"><a href="#">Главная</a></li>
+                <li class="main-nav__item"><a href="#">Фотографии</a></li>
+                <li class="main-nav__item"><a href="#">конкурс</a></li>
+                <li class="main-nav__item"><a href="#">html academy</a></li>
+            </ul>
         </div>
-        <p class="application__legend">Доступно для iPhone, iPad, Android,<br>
-           Windows Phone, OS X, Windows 8</p>
+        </nav>
+          <h2 class="page-header__intro">Взгляните на жизнь иначе!</h2>
+          <img src="img/phone-in-hand.png" width="320" height="268" alt="окрашивает жизнь в разные цвета">
+      </div>
+      <section class="page-header__application">
+          <a class="application__link" href="#">Скачать приложение</a>
+            <ul class="links__list">
+              <li class="links__item"><a href="#">ios</a></li>
+              <li class="links__item"><a href="#">android</a></li>
+              <li class="links__item"><a href="#">windows</a></li>
+            </ul>
+          <p class="application__legend">Доступно для iPhone, iPad, Android,<br>
+              Windows Phone, OS X, Windows 8</p>
       </section>
     </header>
     <main class="page__main">
       <section class="about-application">
-        <div class="about-application__wrapper">
           <h2 class="about-application__slogan">Устали от серости мегаполиса?</h2>
           <h2 class="about-application__slogan">Нам есть, что вам предложить!</h2>
-        </div>
         <div class="about-application__items">
           <article class="about-application__item">
             <h3 class="about-application__title">Поднимает настроение</h3>
@@ -50,7 +52,6 @@
             <h3 class="about-application__title">Заводит новых друзей</h3>
             <p class="about-application__content">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
           </article>
-          <img class="main-image" src="img/iphone3.png" alt="всем привет">
         </div>
       </section>
       <section class="reviews slider">
