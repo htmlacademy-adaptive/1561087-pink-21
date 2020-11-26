@@ -1,0 +1,41 @@
+.page-header {
+  color: white;
+}
+.page-header__head {
+  display: flex;
+  justify-content: space-between;
+}
+.page-header__wrapper {
+  background-image: url(../img/back-mobile.png);
+  height: 462px;
+  width: 320px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.main-nav__item a {
+  color: white;
+}
+.about-application__items {
+  background-color: #F2F2F2;
+}
+.page {
+  height: 100%;
+  font-size: 14px;
+  font-family: sans-serif;
+  line-height: 27px;
+}
+.page-header__application {
+  background-color: #1D2631;
+}
+.links__list a {
+  text-decoration: none;
+}
+.links__list {
+  display: flex;
+  list-style: none;
+}
+.links__item {
+  margin-left: 35px;
+}
+
+/*# sourceMappingURL=style.css.map */
