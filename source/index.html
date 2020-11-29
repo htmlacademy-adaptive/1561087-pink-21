@@ -4,38 +4,37 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="page-header">
-        <div class="page-header__wrapper">
-          <div class="page-header__head">
-            <a class="logo" href="#"><img src="img/logo.svg" width="74" height="23" alt="логотип сайта pink"></a>
-            <nav class="main-nav">
-              <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-                <ul class="main-nav__list">
-                  <li class="main-nav__item"><a href="#">Главная</a></li>
-                  <li class="main-nav__item"><a href="#">Фотографии</a></li>
-                  <li class="main-nav__item"><a href="#">конкурс</a></li>
-                  <li class="main-nav__item"><a href="#">html academy</a></li>
-              </ul>
-            </nav>
-          </div>
-            <h2 class="page-header__intro">Взгляните на жизнь иначе!</h2>
-            <img class="iphone" src="img/phone-in-hand.png" width="" height="268" alt="окрашивает жизнь в разные цвета">
-          </div>
-        <section class="page-header__application application">
-            <a class="application__link" href="#">Скачать приложение</a>
-              <ul class="links__list">
-                <li class="links__item"><a href="#">ios</a></li>
-                <li class="links__item"><a href="#">android</a></li>
-                <li class="links__item"><a href="#">windows</a></li>
-              </ul>
-            <p class="application__legend">Доступно для iPhone, iPad, Android,<br>
-                Windows Phone, OS X, Windows 8</p>
-        </section>
+      <div class="page-header__wrapper">
+        <div class="page-header__head">
+          <a class="logo" href="#"><img src="img/logo.svg" width="74" height="23" alt="логотип сайта pink"></a>
+          <nav class="main-nav">
+            <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+              <ul class="main-nav__list">
+                <li class="main-nav__item"><a href="#">Главная</a></li>
+                <li class="main-nav__item"><a href="#">Фотографии</a></li>
+                <li class="main-nav__item"><a href="#">конкурс</a></li>
+                <li class="main-nav__item"><a href="#">html academy</a></li>
+            </ul>
+        </div>
+        </nav>
+          <h2 class="page-header__intro">Взгляните на жизнь иначе!</h2>
+          <img src="img/phone-in-hand.png" width="320" height="268" alt="окрашивает жизнь в разные цвета">
+      </div>
+      <section class="page-header__application">
+          <a class="application__link" href="#">Скачать приложение</a>
+            <ul class="links__list">
+              <li class="links__item"><a href="#">ios</a></li>
+              <li class="links__item"><a href="#">android</a></li>
+              <li class="links__item"><a href="#">windows</a></li>
+            </ul>
+          <p class="application__legend">Доступно для iPhone, iPad, Android,<br>
+              Windows Phone, OS X, Windows 8</p>
+      </section>
     </header>
     <main class="page__main">
       <section class="about-application">
@@ -60,21 +59,19 @@
           <h2 сclass="visually-hidden">Отзывы пользователей</h2>
           <div class="reviews__list slider__list">
             <blockquote class="reviews__item slider__item">
-            <h3 class="reviews__author-name">Николай Петров</h3>
+            <cite class="reviews__author-name">Николай Петров</cite>
             <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </blockquote>
             <blockquote class="reviews__item slider__item">
-            <h3 class="reviews__author-name">Николай Петров</h3>
+            <cite class="reviews__author-name">Николай Петров</cite>
             <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </blockquote><blockquote class="reviews__item slider__item">
-            <h3 class="reviews__author-name">Николай Петров</h3>
+            <cite class="reviews__author-name">Николай Петров</cite>
             <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </blockquote>
-            <div class="slider__buttons">
-              <button class="slider__toggle slider__toggle--current" type="button"></button>
-              <button class="slider__toggle" type="button"></button>
-              <button class="slider__toggle" type="button"></button>
-            </div>
+            <button class="slider__toggle slider__toggle--current" type="button">1</button>
+            <button class="slider__toggle" type="button">2</button>
+            <button class="slider__toggle" type="button">3</button>
           </div>
         </div>
         </section>
@@ -113,14 +110,13 @@
               </tr>
             </tbody>
           </table>
-          <div class="slider__buttons">
-            <button class="slider__toggle slider__toggle--current" type="button"></button>
-            <button class="slider__toggle" type="button"></button>
-            <button class="slider__toggle" type="button"></button>
-          </div>
+          <button class="slider__toggle slider__toggle--current" type="button">1</button>
+          <button class="slider__toggle" type="button">2</button>
+          <button class="slider__toggle" type="button">3</button>
         </section>
     </main>
     <footer class="page-footer">
+      <div class="page-footer__wrapper">
         <div class="page-footer__contacts contacts">
           <h3 class="contacts__text">Остались вопросы?<br>
             Свяжитесь с нами!</h3>
@@ -131,7 +127,7 @@
               <p>Приезжайте в гости:</p>
               <a href="#">ул. Большая Конюшенная, 19/8</a>
         </div>
-          <a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps"</a> <a href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.323118%2C59.938635&source=wizgeo&utm_medium=mapframe&utm_source=maps&z=16.39"</a><iframe src="https://yandex.ru/map-widget/v1/-/CCQ~fHQMKB" width="320" height="200"></iframe>
+          <img class="page-footer__map" src="img/map.png"  width="320" height="200" alt="ул. Большая Конюшенная, 19/8">
           <a class="logo" href="#"><img src="img/logo.svg" width="74" height="23" alt="логотип сайта pink"></a>
           <div class="page-footer__social social">
             <ul class="social__list">
@@ -162,6 +158,7 @@
 </svg>
 </a>
           </div>
+      </div>
     </footer>
   </body>
 </html>
