@@ -1,23 +1,54 @@
-.page-header {
+.page-header{
   color: white;
-  background-color: #1d2631;
   margin-bottom: 46px;
+}
+.page-header--index {
+  background-color: #1d2631;
+  padding-bottom: 271px;
+  @media (min-width: @tablet-width) {
+    padding-bottom: 0px;
+  }
 }
 
 .page-header__head {
   display: flex;
   justify-content: space-between;
+  padding: 22px 20px;
+  background: rgba(0, 0, 0, 0.3)
 }
-
-.page-header__wrapper {
-  background: url(https://htmlacademy-adaptive.github.io/1561087-pink-21/9/img/phone-in-hand.png) no-repeat 50%/150px, url(../img/back-mobile.png) no-repeat 50%/cover;
-  padding-bottom: 300px;
-  background-position: bottom;
+.page-header__wrapper{
+  background: url(../img/back-mobile.png) no-repeat 50% /cover;
 }
+.page-header__wrapper--index {
+  max-height: 471px;
+  max-width: 660px;
+  background: url(../img/phone-in-hand.png) no-repeat 50% 100%, url(../img/back-mobile.png) no-repeat 50% /cover;
+  margin-left: auto;
+  margin-right: auto;
 
+  @media (min-width: @tablet-width) {
+    max-width: 1000px;
+    max-height: 550px;
+    background: url(../img/phone-in-hand.png) no-repeat 100% 100%, url(../img/back-mobile.png) no-repeat 50% /cover;
+  }
+}
 .page-header-title {
+  max-width: 280px;
   font-weight: 300;
   font-size: 24px;
   text-align: center;
-  margin: 0 20px;
+  margin: 0 auto;
+  margin-top: 29px;
+}
+
+.page-header-title--index {
+  @media (min-width: @tablet-width) {
+    text-align: left;
+    margin-left: 20px;
+    text-align: center;
+    max-width: 300px;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 120%;
+  }
 }

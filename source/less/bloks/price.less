@@ -5,14 +5,40 @@
 .price__list {
   width: 300%;
   text-align: center;
-  transform: translateX(-33%);
+  transform: translateX(-0%);
   transition: 0.5s;
-}
 
-.price__item td:first-child {
-  display: none;
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    transform: translateX(-0);
+  }
 }
 
 .price__empty-cell {
   display: none;
+  background-color: white;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    background-color: white;
+  }
+}
+
+.price__title {
+  width: 276px;
+  background: #283645;
+  border: 2px solid #283645;
+  border-radius: 1px 0px 0px 0px;
+}
+.price__item td:first-child {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+.price__button{
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
