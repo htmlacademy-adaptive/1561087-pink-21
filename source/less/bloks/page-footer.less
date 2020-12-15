@@ -24,3 +24,20 @@
   line-height: 33px;
   text-decoration: none;
 }
+.page-footer__item{
+  display: inline-block;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 50px;
+  }
+}
+.page-footer__map {
+  border: 0;
+}
+.page-footer__wrapper{
+  .wrap();
+  @media (min-width: @tablet-width) {
+  display: flex;
+  justify-content: space-between;
+  }
+}
