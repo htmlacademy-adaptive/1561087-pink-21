@@ -1,22 +1,79 @@
 .user-form {
-  width: 320px;
-  margin-left: auto;
-  margin-right: auto;
-}
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  .wrap ();
 
+  @media (min-width: @tablet-width) {
+      flex-direction: row;
+  }
+}
 .user-form__item {
   padding: 0;
   border: 0;
-}
+  @media (min-width: @tablet-width) {
+    &:nth-child(2){
+      order: -3;
+    }
+    &:nth-child(5){
+      order: -2;
+    }
+   }
+  }
 
 .user-form__title {
+  .wrap ();
   color: #283645;
   text-align: center;
-  margin: 0 20px;
+  order: -4;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+  }
 }
 
 .user-form__legend {
   color: #d22856;
   text-align: center;
   text-transform: uppercase;
+}
+
+.user-form__submit {
+  .wrap ();
+}
+
+.user-form__submit-button {
+  width: 279px;
+  height: 59px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  background: #2AAB6D;
+  border: 2px solid #2AAB6D;
+  border-radius: 1px;
+}
+
+.user-form__achievements {
+  margin: 0;
+  padding: 0;
+}
+
+.user-form__achievements-item {
+  font-size: 18px;
+  list-style: none;
+  color: #283645;
+}
+.user-form__achievements-item:not(:last-child) {
+  margin-bottom: 59px;
+}
+.user-form__application {
+  margin: 0;
+  padding: 0;
+}
+
+.user-form__application-item {
+  font-size: 18px;
+  list-style: none;
+  color: #283645;
 }

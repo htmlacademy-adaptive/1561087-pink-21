@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.about-application__wrapper {
+  background: #f2f2f2;
+}
+
 .about-application__item {
   max-width: 280px;
   margin: 0 auto;
@@ -11,16 +15,30 @@
     text-align: left;
   }
 
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    text-align: center;
+    max-width: 252px;
+  }
 }
 
 .about-application__items {
-  background: #f2f2f2 url(../img/iphone3.png) no-repeat 50% 100%;
+  .wrap ();
+  background: url(../img/iphone3.png)  no-repeat 50% 100%;
   padding-bottom: 330px;
-  // text-align: right;
 
   @media (min-width: @tablet-width) {
     background-position: 6% 10%;
     background-size: 268px;
+    padding-bottom: 0;
+    padding-top: 100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    background: 0;
+    padding-top: 370px;
   }
 }
 
@@ -41,10 +59,18 @@
 .about-application__title {
   font-size: 18px;
   color: #000000;
+
+  @media (min-width: @desktop-width) {
+    font-size: 30px;
+  }
 }
 
 .about-application__content {
   font-size: 14px;
   line-height: 24px;
   color: #283645;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+  }
 }

@@ -1,34 +1,41 @@
-.page-header{
+.page-header {
   color: white;
   margin-bottom: 46px;
+  background-color: #1d2631;
 }
+
 .page-header--index {
   background-color: #1d2631;
   padding-bottom: 271px;
+
   @media (min-width: @tablet-width) {
     padding-bottom: 0px;
   }
 }
 
-.page-header__head {
+.page-header__head-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 22px 20px;
+  .wrap();
+}
+
+.page-header__head {
+  padding: 22px 0px;
   background: rgba(0, 0, 0, 0.3)
 }
+
 .page-header__wrapper{
   background: url(../img/back-mobile.png) no-repeat 50% /cover;
 }
+
 .page-header__wrapper--index {
-  max-height: 471px;
-  max-width: 660px;
+  max-height: 454px;
+  max-width: 1020px;
   background: url(../img/phone-in-hand.png) no-repeat 50% 100%, url(../img/back-mobile.png) no-repeat 50% /cover;
   margin-left: auto;
   margin-right: auto;
 
   @media (min-width: @tablet-width) {
-    max-width: 1000px;
-    max-height: 550px;
     background: url(../img/phone-in-hand.png) no-repeat 100% 100%, url(../img/back-mobile.png) no-repeat 50% /cover;
   }
 }
@@ -44,11 +51,14 @@
 .page-header-title--index {
   @media (min-width: @tablet-width) {
     text-align: left;
-    margin-left: 20px;
+    margin-left: 0px;
     text-align: center;
     max-width: 300px;
     font-size: 40px;
     font-weight: 300;
     line-height: 120%;
   }
+}
+.page-header__wrapper--tablet{
+  .wrap();
 }

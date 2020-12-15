@@ -1,13 +1,25 @@
 .reviews {
   margin-bottom: 143px;
-  // max-width: 280px;
-  margin: 0 auto;
+  .wrap();
 }
 
 .reviews__author-name {
+  margin: 0;
   font-size: 18px;
+  font-weight: 700;
   align-items: center;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    order: 1;
+    font-size: 20px;
+  }
+}
+.reviews__author-info {
+  color: #283645;
+  font-weight: 400;
+  text-align: center;
+  order: 3
 }
 
 .reviews__text {
@@ -17,8 +29,10 @@
   text-align: center;
   color: #283645;
 }
-.reviews__item{
-  display: none;
+
+.reviews__item {
+  display: flex;
+  justify-content: center;
   margin: 0;
   padding: 0;
   max-width: 688px;
