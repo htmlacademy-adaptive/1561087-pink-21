@@ -19,6 +19,15 @@
       order: -2;
     }
    }
+   @media (min-width: @desktop-width) {
+     width: 100%;
+     &:nth-child(2){
+       width: 50%;
+     }
+     &:nth-child(5){
+       width: 49%;
+     }
+    }
   }
 
 .user-form__title {
@@ -57,7 +66,13 @@
 .user-form__achievements {
   margin: 0;
   padding: 0;
-}
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+   }
+ }
+
 
 .user-form__achievements-item {
   font-size: 18px;
