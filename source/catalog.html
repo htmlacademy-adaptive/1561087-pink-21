@@ -30,8 +30,12 @@
       <div class="fhotogalery">
         <h2 class="fhotogalery__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
         <div class="fhotogalery__photo-of-the-day">
-          <img class="photo-of-the-day" src="img/panorama-tablet.jpg"  width="100%" height="137" alt="панорама моста">
-          <article class="user-comments">
+          <picture>
+            <source media="(min-width: 660px)" srcset="img/panorama-tablet.jpg 1x, img/panorama-tablet@2x.jpg 2x">
+            <source media="(min-width: 1200px)" srcset="img/panorama-desktop.jpg 1x, img/panorama-desktop@2x.jpg 2x">
+            <img class="photo-of-the-day" src="img/panorama-mobile.jpg" srcset="img/panorama-mobile@2x.jpg 2x"  width="100%" height="auto" alt="панорама моста">
+          </picture>
+          <article class="user-comments--photo-of-the-day">
             <h4 class="user-comments__username">Анна<span class="user-comments__time">(5 минут назад)</span></h4>
             <p class="user-comments__comment">Прыгать или нет? Напишите в комментарии свой совет и
               смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
@@ -40,7 +44,11 @@
         </div>
         <section class="user-photos">
           <div class="user-photos__item">
-            <img src="img/photo-1-mobile.jpg" width="280" height="180" alt="автомобиль">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+                <img src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" width="100%" alt="автомобиль">
+              </picture>
             <article class="user-comments">
               <h4 class="user-comments__username">Левон<span class="user-comments__time">(5 часов назад)</span></h4>
               <p class="user-comments__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
@@ -48,7 +56,11 @@
             </article>
           </div>
           <div class="user-photos__item">
-            <img src="img/photo-2-mobile.jpg" width="280" height="180" alt="барабанная установка">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+              <img src="img/photo-2-mobile.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" width="100%" alt="барабанная установка">
+            </picture>
             <article class="user-comments">
               <h4 class="user-comments__username">Антон<span class="user-comments__time">(12 часов назад)</span></h4>
               <p class="user-comments__comment">Соседи будут рады!</p>
@@ -56,7 +68,11 @@
             </article>
           </div>
           <div class="user-photos__item">
-            <img src="img/photo-3-tablet.jpg" width="280" height="180" alt="панорамная крыша">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+              <img src="img/photo-3-mobile.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" width="100%" alt="панорамная крыша">
+            </picture>
             <article class="user-comments">
               <h4 class="user-comments__username">Борис<span class="user-comments__time">(20 часов назад)</span></h4>
               <p class="user-comments__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
@@ -64,7 +80,11 @@
             </article>
           </div>
           <div class="user-photos__item">
-            <img src="img/photo-4-tablet.jpg" width="280" height="180" alt="кубанская бахча">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-4-desktop.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-4-tablet.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
+              <img src="img/photo-4-mobile.jpg" srcset="img/photo-4-mobile@2x.jpg 2x" width="100%" alt="кубанская бахча">
+            </picture>
             <article class="user-comments">
               <h4 class="user-comments__username">Сергей<span class="user-comments__time">(25 часов назад)</span></h4>
               <p class="user-comments__comment">Самая кубанская в мире!</p>
@@ -72,7 +92,11 @@
             </article>
           </div>
           <div class="user-photos__item">
-            <img src="img/photo-5-tablet.jpg" width="280" height="180" alt="зеленые горы">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-5-desktop.jpg 1x, img/photo-5-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-5-tablet.jpg 1x, img/photo-5-tablet@2x.jpg 2x">
+              <img src="img/photo-5-mobile.jpg" srcset="img/photo-5-mobile@2x.jpg 2x" width="100%" alt="горы">
+            </picture>
             <article class="user-comments">
               <h4 class="user-comments__username">Максим<span class="user-comments__time">(40 часов назад)</span></h4>
               <p class="user-comments__comment">Где снег-то?</p>
@@ -80,7 +104,11 @@
             </article>
           </div>
           <div class="user-photos__item">
-            <img src="img/photo-6-tablet.jpg" width="280" height="180" alt="крыло самолета">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-6-desktop.jpg 1x, img/photo-6-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-6-tablet.jpg 1x, img/photo-6-tablet@2x.jpg 2x">
+              <img src="img/photo-6-mobile.jpg" srcset="img/photo-6-mobile@2x.jpg 2x" width="100%" alt="крыло самолета">
+            </picture>
             <article class="user-comments">
               <h4 class="user-comments__username">Надежда<span class="user-comments__time">(45 часов назад)</span></h4>
               <p class="user-comments__comment320">Всем GM и взаимные лайки!</p>
@@ -92,7 +120,10 @@
       <section class="photo-load">
         <h2 class="photo-load__title">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</h2>
         <form class="photo-load__form" action="index.html" method="post">
-          <img src="img/photo-7-tablet.jpg" alt="">
+          <picture>
+            <source media="(min-width: 660px)" srcset="img/photo-7-tablet.jpg 1x, img/photo-7-tablet@2x.jpg 2x">
+            <img src="img/photo-7-mobile.jpg" srcset="img/photo-7-mobile@2x.jpg 2x" alt="ваше фото">
+          </picture>
           <div class="photo-load__tools tools">
             <button class="tools__size" type="button" name="button"><svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M32 28H36V12C36 10.9391 35.5786 9.92172 34.8284 9.17157C34.0783 8.42143 33.0609 8 32 8H16V12H32V28ZM12 32V0H8V8H0V12H8V32C8 33.0609 8.42143 34.0783 9.17157 34.8284C9.92172 35.5786 10.9391 36 12 36H32V44H36V36H44V32H12Z" fill="#D22856"/>
