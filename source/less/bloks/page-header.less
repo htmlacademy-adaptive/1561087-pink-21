@@ -2,15 +2,7 @@
   color: white;
   margin-bottom: 46px;
   background-color: #1d2631;
-}
-
-.page-header--index {
-  background-color: #1d2631;
-  padding-bottom: 271px;
-
-  @media (min-width: @tablet-width) {
-    padding-bottom: 0px;
-  }
+  background: url(../img/back-mobile.png) no-repeat 50% /cover;
 }
 
 .page-header__head-wrapper {
@@ -21,24 +13,9 @@
 
 .page-header__head {
   padding: 22px 0px;
-  background: rgba(0, 0, 0, 0.3)
+  background: rgba(0, 0, 0, 0.3);
 }
 
-.page-header__wrapper{
-  background: url(../img/back-mobile.png) no-repeat 50% /cover;
-}
-
-.page-header__wrapper--index {
-  max-height: 454px;
-  max-width: 1020px;
-  background: url(../img/phone-in-hand.png) no-repeat 50% 100%, url(../img/back-mobile.png) no-repeat 50% /cover;
-  margin-left: auto;
-  margin-right: auto;
-
-  @media (min-width: @tablet-width) {
-    background: url(../img/phone-in-hand.png) no-repeat 100% 100%, url(../img/back-mobile.png) no-repeat 50% /cover;
-  }
-}
 .page-header-title {
   max-width: 280px;
   font-weight: 300;
@@ -50,7 +27,6 @@
 
 .page-header-title--index {
   @media (min-width: @tablet-width) {
-    text-align: left;
     margin-left: 0px;
     text-align: center;
     max-width: 300px;
@@ -60,5 +36,19 @@
   }
 }
 .page-header__wrapper--tablet{
-  .wrap();
+  background: url(../img/phone-in-hand.png) no-repeat 50% 30%;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: @tablet-width) {
+    background-position: 130% 100%;
+    background-size: 400px;
+    .wrap ();
+  }
+
+  @media (min-width: @desktop-width) {
+    background-position: 100% 100%;
+    background-size: 470px;
+    .wrap ();
+  }
 }
