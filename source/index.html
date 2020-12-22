@@ -10,21 +10,24 @@
     <header class="page-header page-header--index">
         <div class="page-header__head">
           <div class="page-header__head-wrapper">
-            <a class="logo" href="#">
-              <picture>
-                <source media="(min-width: 1200px)" srcset="img/logotype-white-desktop.svg">
-                <source media="(min-width: 660px)" srcset="img/logotype-white-tablet.svg" height="40">
-                <img src="img/logo.svg" width="74" height="23" alt="логотип сайта pink">
-              </picture>
-            </a>
             <nav class="main-nav">
-              <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-                <ul class="main-nav__list">
-                  <li class="main-nav__item"><a href="#">Главная</a></li>
-                  <li class="main-nav__item"><a href="catalog.html">Фотграфии</a></li>
-                  <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
-                  <li class="main-nav__item"><a href="#">HTML Academy</a></li>
-              </ul>
+              <div class="main-nav__list">
+                <p class="main-nav__item main-nav__item--logo main-nav__item--open"><a class="logo" href="#">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/logotype-white-desktop.svg">
+                    <source media="(min-width: 660px)" srcset="img/logotype-white-tablet.svg" height="40">
+                    <img src="img/logo.svg" alt="логотип сайта pink">
+                  </picture>
+                </a>
+                <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+              </p>
+                <div class="main-nav__wrapper main-nav__wrapper--open">
+                  <p class="main-nav__item"><a href="#">Главная</a></p>
+                  <p class="main-nav__item"><a href="catalog.html">Фотграфии</a></p>
+                  <p class="main-nav__item"><a href="form.html">Конкурс</a></p>
+                  <p class="main-nav__item"><a href="#">HTML Academy</a></p>
+                </div>
+              </div>
           </nav>
           </div>
         </div>
