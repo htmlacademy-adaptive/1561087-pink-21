@@ -1,5 +1,6 @@
 .about-application {
   text-align: center;
+  overflow: hidden;
 
 }
 
@@ -71,14 +72,30 @@
 .about-application__items {
   .wrap ();
   z-index: 2;
-  background: url(../img/phone.svg)  no-repeat 50% 109%;
   padding-bottom: 330px;
+  position: relative;
+  &::before {
+    content: "";
+    width: 157px;
+    height: 280px;
+    bottom: 0;
+    left: 60px;
+    background: url(../img/phone.png)  no-repeat;
+    position: absolute;
+  }
 
   @media (min-width: @tablet-width) {
-    background-position: 6% 48%;
-    background-size: 268px;
     padding-bottom: 0;
     padding-top: 20px;
+    &::before {
+      content: "";
+      width: 268px;
+      height: 547px;
+      bottom: 0;
+      left: 0px;
+      background: url(../img/phone-tablet.png)  no-repeat;
+      position: absolute;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -86,7 +103,9 @@
     justify-content: space-between;
     background: 0;
     margin-top: 100px;
-    // padding-top: 350px;
+    &::before {
+      display: none;
+    }
   }
 }
 
