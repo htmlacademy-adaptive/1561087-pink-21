@@ -1,0 +1,30 @@
+.filter-input-checkbox+label::before {
+	content: "";
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	width: 35px;
+	height: 35px;
+  border: 2px solid #E5E5E5;
+  border-radius: 2px;
+}
+
+.filter-input-checkbox:hover+label::before {
+  border: 2px solid #283645;
+}
+
+.filter-input-checkbox:checked+label::after {
+	content: "";
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+	width: 22px;
+	height: 16px;
+	background-image: url(../img/tick.svg);
+	background-repeat: no-repeat;
+  // border-color: #D22856;
+}
+
+// .filter-input-checkbox:checked:hover+label::after {
+// 	background-image: url(../img/checkbox-on-hover.svg);
+// }
