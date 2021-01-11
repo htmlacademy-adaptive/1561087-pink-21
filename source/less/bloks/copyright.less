@@ -1,9 +1,35 @@
 .copyright {
   display: flex;
   justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+  }
 }
 
 .copyright__link {
-  margin-left: 15px;
-  margin-top: 10px;
+  margin-left: 16px;
+  margin-top: 6px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 9px;
+    margin-left: 15px;
+  }
+}
+
+.copyright__text {
+  font-weight: normal;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    margin-top: 12px;
+  }
 }

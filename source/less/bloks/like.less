@@ -1,6 +1,17 @@
 .like {
-  border: 0;
-  background: none;
+  width: 100%;
+  margin: 0;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: normal;
+  display: block;
   color: #d22856;
   text-transform: uppercase;
+  padding-left: 31px;
+  background: url("../img/heart.svg") no-repeat 0% 30%;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+    background-position: right;
+  }
 }

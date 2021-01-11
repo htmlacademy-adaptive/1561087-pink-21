@@ -1,7 +1,27 @@
 .reviews {
-  margin-top: 50px;
-  margin-bottom: 143px;
+  margin-top: 43px;
+  margin-bottom: 33px;
   .wrap();
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 62px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 105px;
+
+    &::before {
+      content: "";
+      width: 79px;
+      height: 63px;
+      background: url("../img/quotes.svg");
+      position: absolute;
+      top: 10px;
+      left: 431px;
+    }
+  }
 }
 
 .reviews__author-name {
@@ -14,21 +34,46 @@
   @media (min-width: @tablet-width) {
     order: 1;
     font-size: 20px;
+    margin-top: 19px;
+    margin-bottom: 6px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
+    margin-top: 16px;
+    margin-bottom: 4px;
   }
 }
+
 .reviews__author-info {
+  display: none;
   color: #283645;
   font-weight: 400;
   text-align: center;
-  order: 3
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    order: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+  }
 }
 
 .reviews__text {
   font-size: 14px;
+  font-weight: normal;
   line-height: 30px;
   align-items: center;
   text-align: center;
   color: #283645;
+  margin-top: 17px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    font-weight: normal;
+  }
 }
 
 .reviews__item {

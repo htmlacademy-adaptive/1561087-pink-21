@@ -2,13 +2,24 @@
   text-align: center;
   overflow: hidden;
 
+  @media (min-width: @tablet-width) {
+    margin-top: 6px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 21px;
+  }
 }
 
 .about-application__wrapper {
   background: #f2f2f2;
   position: relative;
-  margin-top: 130px;
+  margin-top: 113px;
 
+  @media (min-width: @tablet-width) {
+    margin-top: 80px;
+    padding-bottom: 7px;
+  }
 }
 
 .about-application__wrapper::before {
@@ -17,54 +28,80 @@
   height: 200px;
   background: #f2f2f2;
   display: block;
-  transform: rotate(-5deg);
+  transform: rotate(-6deg);
   margin-left: -5%;
   top: -70px;
+  left: 0;
   z-index: -1;
   position: absolute;
+
+  @media (min-width: @tablet-width) {
+    transform: rotate(-5deg);
+    top: -19px;
+  }
+
+  @media (min-width: @tablet-width) {
+    top: -63px;
+  }
 }
 
 .about-application__item {
   max-width: 280px;
   margin: 0 auto;
   position: relative;
+  margin-top: 10px;
+  margin-bottom: 31px;
 
   @media (min-width: @tablet-width) {
-    margin-left: 350px;
+    margin-left: 310px;
     text-align: left;
+    max-width: 307px;
+    margin-top: 12px;
+    margin-bottom: 34px;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
     text-align: center;
-    max-width: 252px;
-    padding-top: 300px;
+    max-width: 240px;
+    padding-top: 237px;
+
+    &--1 {
+      margin-left: 30px;
+    }
+
     &--1::before {
       content: "";
       width: 275px;
       height: 300px;
       position: absolute;
-      top: -70px;
-      right: 0px;
-      background: url(../img/item-1.png) no-repeat,
+      top: -120px;
+      right: -2px;
+      background: url("../img/item-1.png") no-repeat;
     }
+
     &--2::before {
       content: "";
       width: 275px;
       height: 300px;
       position: absolute;
-      top: -70px;
-      right: 0px;
-      background: url(../img/item-2.png) no-repeat;
+      top: -120px;
+      right: 0;
+      background: url("../img/item-2.png") no-repeat;
     }
+
+    &--3 {
+      margin-right: 30px;
+    }
+
     &--3::before {
       content: "";
       width: 275px;
       height: 300px;
       position: absolute;
-      top: -70px;
-      right: 0px;
-      background: url(../img/item-3.png) no-repeat;
+      top: -120px;
+      right: 0;
+      background: url("../img/item-3.png") no-repeat;
     }
   }
 }
@@ -72,28 +109,30 @@
 .about-application__items {
   .wrap ();
   z-index: 2;
-  padding-bottom: 330px;
+  padding-bottom: 289px;
   position: relative;
+
   &::before {
     content: "";
     width: 157px;
     height: 280px;
     bottom: 0;
     left: 60px;
-    background: url(../img/phone.png)  no-repeat;
+    background: url("../img/phone.png")  no-repeat;
     position: absolute;
   }
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 0;
-    padding-top: 20px;
+    padding-bottom: 1px;
+    padding-top: 13px;
+
     &::before {
       content: "";
       width: 268px;
       height: 547px;
-      bottom: 0;
-      left: 0px;
-      background: url(../img/phone-tablet.png)  no-repeat;
+      bottom: -72px;
+      left: 0;
+      background: url("../img/phone-tablet.png")  no-repeat;
       position: absolute;
     }
   }
@@ -102,7 +141,8 @@
     display: flex;
     justify-content: space-between;
     background: 0;
-    margin-top: 100px;
+    margin-top: 164px;
+
     &::before {
       display: none;
     }
@@ -115,29 +155,49 @@
   font-size: 24px;
   color: #283645;
   margin: 0 auto;
-  margin-bottom: 50px;
+  line-height: 120%;
+  margin-bottom: 31px;
 
   @media (min-width: @tablet-width) {
     font-size: 40px;
     max-width: 588px;
+    line-height: 54px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 50px;
+    line-height: 68px;
+    max-width: 780px;
   }
 }
 
 .about-application__title {
   font-size: 18px;
   color: #000000;
+  margin: 0;
 
   @media (min-width: @desktop-width) {
     font-size: 30px;
+    line-height: 30px;
   }
 }
 
 .about-application__content {
-  font-size: 14px;
-  line-height: 24px;
   color: #283645;
+  font-weight: normal;
+  margin-top: 15px;
+  line-height: 23px;
 
   @media (min-width: @desktop-width) {
     font-size: 18px;
+    line-height: 30px;
+    margin-top: 22px;
+  }
+}
+
+.about-application__content br {
+  @media (min-width: @desktop-width) {
+    display: none;
   }
 }
