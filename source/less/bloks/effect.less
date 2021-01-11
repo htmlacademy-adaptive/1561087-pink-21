@@ -2,7 +2,7 @@
   display: none;
   padding-left: 350px;
   padding-top: 20px;
-  background: url(../img/timer.png) no-repeat 6% 0%;
+  background: url("../img/timer.png") no-repeat -1% 17%;
   min-height: 300px;
   margin-top: 100px;
   box-sizing: border-box;
@@ -10,7 +10,23 @@
 
   @media (min-width: @tablet-width) {
     display: block;
+    margin-top: 51px;
+    padding-left: 310px;
     .wrap ();
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    padding-top: 134px;
+    padding-left: 370px;
+    padding-bottom: 115px;
+    background: url("../img/timer-desktop.png") no-repeat 0% 39%;
+  }
+}
+
+.effect__wrapper {
+  @media (min-width: @desktop-width) {
+    background: #f2f2f2;
   }
 }
 
@@ -18,23 +34,47 @@
   max-width: 168px;
   font-size: 30px;
   font-weight: bold;
+  line-height: 36px;
+  margin-bottom: 0;
 
-  @media (min-width: @tablet-width) {
-    max-width: 600px;
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    max-width: 300px;
   }
 }
+
+.effect__title br {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
 .effect__content {
-  max-width: 310px;
+  max-width: 296px;
   line-height: 24px;
   color: #283645;
+  margin-top: 10px;
+  margin-bottom: 12px;
+  font-weight: normal;
 
   @media (min-width: @desktop-width) {
     font-size: 18px;
     max-width: 534px;
+    margin-top: 22px;
+    margin-bottom: 33px;
+    line-height: 30px;
   }
 }
-.effect__link{
+
+.effect__content br {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.effect__link {
   color: #d22856;
+  font-weight: normal;
 
   @media (min-width: @desktop-width) {
     font-size: 18px;

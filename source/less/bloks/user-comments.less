@@ -1,22 +1,79 @@
 .user-comments {
-  width: 253px;
+  width: 260px;
   margin-left: 17px;
+  margin-top: 16px;
 }
 
 .user-comments__username {
   color: #283645;
   font-weight: bold;
+  margin: 0;
+  order: -2;
+
+  @media (min-width: @tablet-width) {
+    width: 75%;
+  }
 }
 
 .user-comments__time {
   font-size: 12px;
   font-weight: 300;
   text-transform: uppercase;
+  margin-left: 3px;
 }
 
 .user-comments__comment {
   color: #283645;
+  line-height: 24px;
+  font-weight: normal;
+  margin-top: 3px;
+
+  &--photo-of-the-day br {
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  &--photo-of-the-day {
+    @media (min-width: @tablet-width) {
+      margin-top: 4px;
+    }
+  }
 }
-.user-comments--photo-of-the-day{
+
+.user-comments_photo-of-the-day {
+  width: 260px;
+  margin-left: 17px;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 30px;
+    width: 560px;
+  }
+}
+
+.user-comments_photo-of-the-day .like {
+  @media (min-width: @tablet-width) {
+    order: -1;
+    width: 119px;
+    height: 12px;
+    margin-top: 3px;
+    margin-left: 21px;
+    padding-bottom: 3px;
+  }
+}
+
+.user-comments_wrapper {
   .wrap ();
+  background: #f2f2f2;
+  padding-top: 26px;
+  padding-bottom: 21px;
+  margin-top: -10px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 31px;
+    padding-bottom: 11px;
+  }
 }

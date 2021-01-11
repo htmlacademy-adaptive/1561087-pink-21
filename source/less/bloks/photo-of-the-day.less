@@ -1,3 +1,13 @@
 .photo-of-the-day {
+  max-height: 137px;
   object-fit: cover;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    max-height: 509px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-height: 506px;
+  }
 }

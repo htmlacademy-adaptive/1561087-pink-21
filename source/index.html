@@ -4,15 +4,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="page-header page-header--index">
         <div class="page-header__head">
           <div class="page-header__head-wrapper">
-            <nav class="main-nav">
+            <nav class="main-nav main-nav--closed">
               <div class="main-nav__list">
-                <p class="main-nav__item main-nav__item--logo main-nav__item--open"><a class="logo" href="#">
+                <p class="main-nav__item main-nav__item--logo"><a class="logo" href="#">
                   <picture>
                     <source media="(min-width: 1200px)" srcset="img/logotype-white-desktop.svg">
                     <source media="(min-width: 660px)" srcset="img/logotype-white-tablet.svg" height="40">
@@ -21,9 +23,9 @@
                 </a>
                 <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
               </p>
-                <div class="main-nav__wrapper main-nav__wrapper--open">
+                <div class="main-nav__wrapper">
                   <p class="main-nav__item"><a href="#">Главная</a></p>
-                  <p class="main-nav__item"><a href="catalog.html">Фотграфии</a></p>
+                  <p class="main-nav__item"><a href="catalog.html">Фотографии</a></p>
                   <p class="main-nav__item"><a href="form.html">Конкурс</a></p>
                   <p class="main-nav__item"><a href="#">HTML Academy</a></p>
                 </div>
@@ -87,28 +89,32 @@
         </div>
         </div>
       </section>
-      <section class="effect">
-        <h2 class="effect__title">Эффект на 24 часа!</h2>
-        <p class="effect__content">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
-        <a class="effect__link" href="#">Узнать больше об исследовании</a>
-      </section>
+      <div class="effect__wrapper">
+        <section class="effect">
+          <h2 class="effect__title">Эффект <br>на 24 часа!</h2>
+          <p class="effect__content">Британские ученые провели исследования и доказали, что положительный эффект <br> от использования приложения длится целые сутки!</p>
+          <a class="effect__link" href="#">Узнать больше об исследовании</a>
+        </section>
+      </div>
       <section class="reviews slider">
         <div class="reviews__wrapper">
           <h2 class="visually-hidden">Отзывы пользователей</h2>
           <div class="reviews__list slider__list">
             <blockquote class="reviews__item slider__item slider__item--active">
             <h4 class="reviews__author-name">Николай Петров</h4>
-            <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             <span class="reviews__author-info">25 лет, водитель трамвая</span>
+            <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </blockquote>
             <blockquote class="reviews__item slider__item">
             <h4 class="reviews__author-name">Николай Петров</h4>
+            <span class="reviews__author-info">25 лет, водитель трамвая</span>
             <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </blockquote><blockquote class="reviews__item slider__item">
             <h4 class="reviews__author-name">Николай Петров</h4>
+            <span class="reviews__author-info">25 лет, водитель трамвая</span>
             <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </blockquote>
-            <div class="slider__buttons">
+            <div class="slider__buttons slider__buttons--reviews">
               <button class="slider__toggle slider__toggle--current" type="button"></button>
               <button class="slider__toggle" type="button"></button>
               <button class="slider__toggle" type="button"></button>
@@ -116,69 +122,70 @@
           </div>
         </div>
         </section>
+        <div class="price__wrapper">
         <section class="price">
-          <table class="price__list">
-            <thead class="price__list-head">
-              <th class="price__empty-cell"></th>
-              <th  class="price__title">база
-                <p>1,99 USD</p>
-              </th>
-              <th  class="price__title corner">
-                стандарт
-                <p>3,99 USD</p>
-              </th>
-              <th  class="price__title">анлим
-                <p>3,99 USD</p>
-              </th>
-            </thead>
-            <tbody>
-              <tr class="price__item">
-                <td class="price_includes">Розовый фильтр</td>
-                <td class="price_includes"><span>Розовый фильтр</span></td>
-                <td class="price_includes"><span>Розовый фильтр</span></td>
-                <td class="price_includes"><span>Розовый фильтр</span></td>
-              </tr>
-              <tr class="price__item">
-                <td class="price_includes">Смайлики</td>
-                <td class="price_includes price_includes--not-included"><span>Смайлики</span></td>
-                <td class="price_includes"><span>Смайлики</span></td>
-                <td class="price_includes"><span>Смайлики</span></td>
-              </tr>
-              <tr class="price__item">
-                <td class="price_includes">Комментарии</td>
-                <td class="price_includes price_includes--not-included"><span>Комментарии</span></td>
-                <td class="price_includes price_includes--not-included"><span>Комментарии</span></td>
-                <td class="price_includes"><span>Комментарии</span></td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="slider__buttons">
-            <button class="slider__toggle slider__toggle--current price__button" type="button"></button>
-            <button class="slider__toggle price__button" type="button"></button>
-            <button class="slider__toggle price__button" type="button"></button>
-          </div>
+            <table class="price__list">
+              <thead class="price__list-head">
+                <th class="price__empty-cell"></th>
+                <th  class="price__title">база
+                  <p>1,99 USD</p>
+                </th>
+                <th class="price__title corner">
+                  стандарт
+                  <p>3,99 USD</p>
+                </th>
+                <th  class="price__title">анлим
+                  <p>9,99 USD</p>
+                </th>
+              </thead>
+              <tbody>
+                <tr class="price__item">
+                  <td class="price_includes">Розовый фильтр</td>
+                  <td class="price_includes"><span>Розовый фильтр</span></td>
+                  <td class="price_includes"><span>Розовый фильтр</span></td>
+                  <td class="price_includes"><span>Розовый фильтр</span></td>
+                </tr>
+                <tr class="price__item">
+                  <td class="price_includes">Смайлики</td>
+                  <td class="price_includes price_includes--not-included"><span>Смайлики</span></td>
+                  <td class="price_includes"><span>Смайлики</span></td>
+                  <td class="price_includes"><span>Смайлики</span></td>
+                </tr>
+                <tr class="price__item">
+                  <td class="price_includes">Комментарии</td>
+                  <td class="price_includes price_includes--not-included"><span>Комментарии</span></td>
+                  <td class="price_includes price_includes--not-included"><span>Комментарии</span></td>
+                  <td class="price_includes"><span>Комментарии</span></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="slider__buttons">
+              <button class="slider__toggle slider__toggle--current price__button" type="button"></button>
+              <button class="slider__toggle price__button" type="button"></button>
+              <button class="slider__toggle price__button" type="button"></button>
+            </div>
         </section>
+        </div>
     </main>
-    <footer class="page-footer">
-        <div class="page-footer__contacts">
-          <h3 class="page-footer__text">Остались вопросы<br>
-            Свяжитесь с нами!</h3>
-              <div class="page-footer__item">
+    <footer class="page-footer page-footer--index">
+        <h3 class="page-footer__text">Остались вопросы? Свяжитесь с нами!</h3>
+            <div class="page-footer__contacts">
+              <div class="page-footer__item page-footer__item--call">
                 <p>Звоните:</p>
                 <a href="tel:+78125556666">+7 (812) 555-66-66</a>
               </div>
-              <div class="page-footer__item">
+              <div class="page-footer__item page-footer__item--email">
                 <p>Пишите:</p>
                 <a href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
               </div>
-              <div class="page-footer__item">
+              <div class="page-footer__item page-footer__item--address">
                 <p>Приезжайте в гости:</p>
-                <a href="#">ул. Большая Конюшенная, 19/8</a>
+                <a href="#">ул. Большая <br> Конюшенная, 19/8</a>
               </div>
-        </div>
-          <a class="page-footer__map" href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" ></a><a href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.323118%2C59.938635&source=wizgeo&utm_medium=mapframe&utm_source=maps&z=16.39" ></a><iframe src="https://yandex.ru/map-widget/v1/-/CCQ~fHQMKB" width="100%" height="200px;" ></iframe>
+            </div>
+          <a class="page-footer__map" href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" ><iframe src="https://yandex.ru/map-widget/v1/-/CCQ~fHQMKB" width="100%" height="200px;" ></iframe></a>
           <div class="page-footer__wrapper">
-            <a class="page-footer__logo" href="#"><img src="img/logo.svg" width="74" height="23" alt="логотип сайта pink"></a>
+            <a class="page-footer__logo" href="#"><img src="img/logotype-footer.svg" alt="логотип сайта pink"></a>
             <div class="page-footer__social social">
               <ul class="social__list">
                 <li class="social__item">
@@ -202,7 +209,7 @@
               </ul>
             </div>
             <div class="page-footer__copyright copyright">
-              <p class="copyright__text">Разработано:</p>
+              <p class="copyright__text">Разработано</p>
               <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="#D22856"/>
                 </svg>

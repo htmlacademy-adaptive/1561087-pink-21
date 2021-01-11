@@ -1,11 +1,26 @@
 .corner::before {
   content: "ХИТ";
+  font-size: 14px;
   font-weight: normal;
   width: 104px;
   height: 23px;
   position: absolute;
-  background: #D22856;
-  left: -30px;
-  top: 10px;
+  background: #d22856;
+  left: -25px;
+  top: 18px;
   transform: rotate(-45deg);
+
+  @media (min-width: @tablet-width) {
+    left: -31px;
+    top: 15px;
+    height: 19px;
+    line-height: 18px;
+  }
+
+  @media (min-width: @tablet-width) {
+    left: -23px;
+    top: 18px;
+    height: 23px;
+    line-height: 24px;
+  }
 }

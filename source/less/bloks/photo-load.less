@@ -1,7 +1,60 @@
 .photo-load {
   text-align: center;
+  margin-top: 44px;
 }
 
 .photo-load__title {
+  font-size: 14px;
+  line-height: 30px;
+  margin: 0;
+  font-weight: normal;
+  .wrap ();
   color: #283645;
+}
+
+.photo-load__form {
+  background: #f2f2f2;
+  padding-top: 20px;
+  margin-top: 42px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
+
+.photo-load__controls {
+  width: 100%;
+  height: 14px;
+  margin-top: 35px;
+  margin-bottom: 38px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #dddfe0;
+}
+
+.photo-load__controls-scale {
+  position: relative;
+  width: 280px;
+  box-sizing: border-box;
+  margin: 6px auto 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  z-index: 1;
+}
+
+.photo-load__controls-bar {
+  height: 2px;
+  background: black;
+}
+
+.photo-load__controls-toggle {
+  position: absolute;
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  top: -5px;
+  left: 76%;
+  background-color: #f2f2f2;
+  border: 2px solid #cd2856;
+  border-radius: 50%;
 }
