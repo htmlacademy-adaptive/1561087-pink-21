@@ -2,7 +2,7 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -8px;
   width: 35px;
   height: 35px;
   border: 2px solid #e5e5e5;
@@ -16,10 +16,14 @@
 .filter-input-checkbox:checked + label::after {
   content: "";
   position: absolute;
-  left: 10px;
-  bottom: 10px;
+  left: 9px;
+  bottom: 4px;
   width: 22px;
   height: 16px;
   background-image: url("../img/tick.svg");
   background-repeat: no-repeat;
+}
+
+.filter-input-checkbox:active + label::before {
+  border: 2px solid #d22856;
 }

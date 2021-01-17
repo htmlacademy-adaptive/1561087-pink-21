@@ -40,6 +40,17 @@
   box-sizing: border-box;
   border-radius: 29px;
 
+  &:hover {
+    background: white;
+    color: #d22856;
+    transition: 0.2s;
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+    background: white;
+  }
+
   @media (min-width: @desktop-width) {
     font-size: 21px;
     height: 56px;
@@ -90,6 +101,17 @@
       margin-right: 3px;
     }
   }
+}
+
+.application__item-academy {
+  &:hover {
+      fill: #283645;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
 }
 
 .application__legend {

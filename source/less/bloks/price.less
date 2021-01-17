@@ -3,6 +3,7 @@
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 45px;
+  overflow: hidden;
 
   @media (min-width: @tablet-width) {
     .wrap ();
@@ -19,7 +20,7 @@
   position: relative;
   overflow-x: hidden;
   padding-top: 100px;
-  background: url("../img/grey-background.png") no-repeat 50% 50%;
+  background: url("../img/grey-background.png") no-repeat 50% 50% / cover;
 
   @media (min-width: @tablet-width) {
     padding-top: 112px;
@@ -47,11 +48,9 @@
 
 .price__empty-cell {
   display: none;
-  background-color: white;
 
   @media (min-width: @tablet-width) {
     display: block;
-    background-color: white;
   }
 }
 
@@ -68,6 +67,7 @@
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
+  border-left: 2px solid;
 
   @media (min-width: @tablet-width) {
     width: 155px;
@@ -132,7 +132,7 @@
   }
 }
 
-.price_includes {
+.price__includes {
   text-transform: uppercase;
   font-weight: normal;
   padding-left: 20px;
@@ -157,7 +157,7 @@
   }
 }
 
-.price_includes span {
+.price__includes span {
   @media (min-width: @tablet-width) {
     display: none;
   }

@@ -11,7 +11,20 @@
   background: url("../img/heart.svg") no-repeat 0% 30%;
 
   @media (min-width: @tablet-width) {
+    position: absolute;
+    bottom: 0;
     padding-left: 0;
-    background-position: right;
+    background-position: 92% 39%;
+
+    &--photo-of-the-day {
+      order: -1;
+      width: 119px;
+      height: 12px;
+      margin-top: 3px;
+      margin-left: 21px;
+      padding-bottom: 3px;
+      position: relative;
+      background-position: 100% 60%;
+    }
   }
 }

@@ -33,6 +33,12 @@
   padding: 20px;
   box-shadow: 0 1px 0 #000000, inset 0 1px 0 rgba(255, 255, 255, 0.15);
 
+  &--active {
+    @media (min-width: @desktop-width) {
+      border-bottom: 2px solid white;
+    }
+  }
+
   &--logo {
     display: flex;
     justify-content: space-between;
@@ -71,24 +77,21 @@
   }
 }
 
-.main-nav__item a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: normal;
-
-  @media (min-width: @tablet-width) {
-    line-height: 44px;
-  }
-}
-
-.main-nav--opened .main-nav__toggle {
+.main-nav__toggle {
   width: 50px;
   height: 24px;
   cursor: pointer;
   border: none;
   background: none;
   position: relative;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
 
   &::before,
   &::after {
@@ -110,21 +113,16 @@
     transform: rotate(-45deg);
   }
 
+
+
   @media (min-width: @desktop-width) {
     display: none;
   }
 }
 
 .main-nav--closed .main-nav__toggle {
-  width: 50px;
-  height: 24px;
-  cursor: pointer;
-  border: none;
-  background: none;
-  position: relative;
 
-  &::before,
-  &::after {
+  &::before, {
     content: "";
     position: absolute;
     top: 0;
@@ -135,6 +133,28 @@
     background-color: #ffffff;
     box-shadow: 0 10px 0 0 #ffffff, 0 20px 0 0 #ffffff;
   }
+}
+
+.main-nav--opened .main-nav__toggle:hover::after,
+.main-nav--opened .main-nav__toggle:hover::before {
+  background: #d22856;
+}
+
+.main-nav--opened .main-nav__toggle:active::after,
+.main-nav--opened .main-nav__toggle:active::before {
+  background: #d22856;
+  opacity: 0.3;
+}
+
+.main-nav--closed .main-nav__toggle:hover::before {
+  background: #d22856;
+  box-shadow: 0 10px 0 0 #d22856, 0 20px 0 0 #d22856;
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background: #d22856;
+  box-shadow: 0 10px 0 0 #d22856, 0 20px 0 0 #d22856;
+  opacity: 0.3;
 }
 
 .main-nav--opened .main-nav__item {
@@ -148,5 +168,26 @@
 .main-nav__toggle {
   @media (min-width: @desktop-width) {
     display: none;
+  }
+}
+
+.main-nav__link {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  &:hover {
+    color: #d22856;
+  }
+
+  &:active {
+    color: white;
+    opacity: 0.3;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-weight: normal;
+    text-transform: capitalize;
   }
 }

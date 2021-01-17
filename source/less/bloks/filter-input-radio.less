@@ -1,24 +1,32 @@
 .filter-input-radio + label::before {
   content: "";
   position: absolute;
-  left: 0;
-  top: -10px;
+  left: 9px;
+  top: -8px;
   width: 37px;
   height: 37px;
   border: 2px solid #e5e5e5;
   border-radius: 50px;
   background: #ffffff;
+
+  @media (min-width: @desktop-width) {
+    left: 24px;
+  }
 }
 
 .filter-input-radio:checked + label::after {
   content: "";
   position: absolute;
-  top: 3px;
-  left: 13px;
+  top: 5px;
+  left: 22px;
   width: 15px;
   height: 15px;
   background-color: #d22856;
   border-radius: 50%;
+
+  @media (min-width: @desktop-width) {
+    left: 37px;
+  }
 }
 
 .filter-input-radio:hover + label::before {
