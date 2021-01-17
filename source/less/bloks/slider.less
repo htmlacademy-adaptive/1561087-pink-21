@@ -13,22 +13,32 @@
   padding: 0;
   width: 6px;
   height: 6px;
-  background-color: #bec2c7;
+  background-color: #283645;
+  opacity: 0.3;
   border: 0;
   border-radius: 50%;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+
+  &--current {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 3px solid #283645;
+    opacity: 1;
+    box-sizing: content-box;
+  }
 }
 
 .slider__toggle:not(:last-child) {
   margin-right: 19px;
-}
-
-.slider__toggle--current {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #ffffff;
-  border: 3px solid #283645;
-  box-sizing: content-box;
 }
 
 .slider__item {

@@ -2,6 +2,14 @@
   text-align: center;
   margin-top: 38px;
   padding-bottom: 43px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 57px;
+  }
 }
 
 .tools button {
@@ -9,28 +17,95 @@
 }
 
 .tools__changes {
-  display: flex;
-  justify-content: space-around;
-  .wrap();
+  margin-bottom: 110px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
+    display: flex;
     flex-direction: column;
     text-align: left;
-    margin-left: 20px;
+    margin-left: 35px;
+    margin-top: 9px;
+    margin-bottom: 29px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+    margin-top: 13px;
   }
 }
 
-.tools__size {
-  margin-left: 19px;
+.tools__changes-item {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 9px;
+  margin-right: 22px;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+  }
+
+  &--size {
+    @media (min-width: @tablet-width) {
+      margin-left: 0;
+      top: -12px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -15px;
+    }
+  }
+
+  &--color {
+    @media (min-width: @tablet-width) {
+      margin-left: 0;
+      top: 68px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 58px;
+    }
+  }
+
+  &--shadow {
+    @media (min-width: @tablet-width) {
+      margin-left: 0;
+      top: 155px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 133px;
+      left: 6px;
+    }
+  }
 }
 
-.tools__color {
-  margin-top: auto;
+.tools__changes-icon {
+  fill: #283645;
+  opacity: 0.3;
+  width: 24px;
+
+
+  &--active {
+    fill: #d22856;
+    opacity: 1;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
-.tools__shadow {
-  margin-top: 6px;
-  margin-right: 31px;
+.tools__changes-icon--active:hover {
+  opacity: 1;
+}
+
+.tools__buttons {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    margin-top: 104px;
+  }
 }
 
 .tools__button {
@@ -47,11 +122,43 @@
   color: #d22856;
   margin-top: 10px;
   box-sizing: border-box;
+  cursor: pointer;
 
-  &--cancell {
+  &:hover {
+    background: #d22856;
+    color: #ffffff;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 183px;
+    margin-left: 0;
+    margin-right: 34px;
+  }
+
+  &--cancel {
     color: #283645;
     border: 3px solid #283645;
     opacity: 0.1;
     line-height: 50px;
+
+    &:hover {
+      color: #283645;
+      opacity: 0.3;
+      background: 0;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+      background: #283645;
+      opacity: 0.3;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 10px;
+    }
   }
 }

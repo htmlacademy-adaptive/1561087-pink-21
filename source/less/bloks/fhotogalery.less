@@ -19,6 +19,10 @@
     line-height: 30px;
     max-width: 560px;
   }
+
+  @media (min-width: @desktop-width) {
+    max-width: 580px;
+  }
 }
 
 .fhotogalery__photo-of-the-day {
@@ -27,6 +31,10 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 77px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 89px;
   }
 
   &::before {
@@ -46,6 +54,11 @@
 
     @media (min-width: @tablet-width) {
       top: 57px;
+    }
+
+    @media (min-width: @tablet-width) {
+      top: 54px;
+      right: 130px;
     }
   }
 }
