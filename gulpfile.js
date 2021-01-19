@@ -7,6 +7,7 @@ const autoprefixer = require("autoprefixer");
 const csso = require("postcss-csso");
 const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
+const uglify = require("gulp-uglify");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const del = require("del");
@@ -39,6 +40,20 @@ const html = () => {
     .pipe(gulp.dest("build"));
 }
 
+exports.html = html;
+
+// Scripts
+
+const scripts = () => {
+  return gulp.src("source/js/script.js")
+    .pipe(uglify())
+    .pipe(rename("script.min.js"))
+    .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
+}
+
+exports.scripts = scripts;
+
 // Images
 
 const images = () => {
@@ -62,20 +77,6 @@ const createWebp = () => {
 }
 
 exports.createWebp = createWebp;
-
-// Copy
-
-const copy = (done) => {
-  gulp.src([
-    "source/img/**/*.{jpg,png,svg}",
-  ], {
-    base: "source"
-  })
-    .pipe(gulp.dest("build"))
-  done();
-}
-
-exports.copy = copy;
 
 // Clean
 
@@ -106,6 +107,8 @@ const reload = done => {
   done();
 }
 
+exports.reload = reload;
+
 // Watcher
 
 const watcher = () => {
@@ -114,16 +117,18 @@ const watcher = () => {
   gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
+exports.watcher = watcher;
+
 // Build
 
 const build = gulp.series(
-  clean,
+  // clean,
   gulp.parallel(
     styles,
     html,
-    copy,
     images,
-    createWebp
+    createWebp,
+    scripts
   ));
 
 exports.build = build;
@@ -131,12 +136,12 @@ exports.build = build;
 // Default
 
 exports.default = gulp.series(
-  clean,
+  // clean,
   gulp.parallel(
     styles,
     html,
-    copy,
-    createWebp
+    createWebp,
+    scripts
   ),
   gulp.series(
     server,
