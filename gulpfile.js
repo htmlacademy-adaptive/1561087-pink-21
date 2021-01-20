@@ -54,6 +54,20 @@ const scripts = () => {
 
 exports.scripts = scripts;
 
+// Copy
+
+const copy = (done) => {
+  gulp.src([
+    "source/fonts/*.{woff2,woff}",
+  ], {
+    base: "source"
+  })
+    .pipe(gulp.dest("build"))
+  done();
+}
+
+exports.copy = copy;
+
 // Images
 
 const images = () => {
@@ -128,7 +142,8 @@ const build = gulp.series(
     html,
     images,
     createWebp,
-    scripts
+    copy,
+    scripts,
   ));
 
 exports.build = build;
@@ -141,6 +156,7 @@ exports.default = gulp.series(
     styles,
     html,
     createWebp,
+    copy,
     scripts
   ),
   gulp.series(

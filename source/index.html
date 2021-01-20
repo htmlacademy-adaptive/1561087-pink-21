@@ -4,8 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page__body">
@@ -53,16 +51,14 @@
     <header class="page-header page-header--index">
         <div class="page-header__head">
           <div class="page-header__head-wrapper">
-            <nav class="main-nav main-nav--opened main-nav--no-js">
+            <nav class="main-nav main-nav--opened">
               <div class="main-nav__list">
                 <p class="main-nav__item main-nav__item--logo">
-                  <a class="logo" href="#">
+                  <a class="page-header__logo" href="#">
                   <picture>
                     <source media="(min-width: 1200px)" srcset="img/logotype-white-desktop.svg">
                     <source media="(min-width: 660px)" srcset="img/logotype-white-tablet.svg" height="40">
-                      <svg class="page-header__logo" width="74" height="23" fill="#ffffff">
-                        <use xlink:href="#logo"></use>
-                      </svg>
+                    <img src="img/logo.svg" alt="логотип сайта pink">
                   </picture>
                 </a>
                 <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -134,30 +130,30 @@
         </section>
       </div>
       <section class="reviews slider">
-        <div class="reviews__wrapper">
-          <h2 class="visually-hidden">Отзывы пользователей</h2>
-          <div class="reviews__list slider__list">
-            <blockquote class="reviews__item reviews__item--1 reviews__item--active">
-            <h4 class="reviews__author-name">Николай Петров</h4>
-            <span class="reviews__author-info">25 лет, водитель трамвая</span>
-            <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-            </blockquote>
-            <blockquote class="reviews__item reviews__item--2">
-            <h4 class="reviews__author-name">Петр Николаев</h4>
-            <span class="reviews__author-info">25 лет, водитель трамвая</span>
-            <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-            </blockquote>
-            <blockquote class="reviews__item reviews__item--3">
-            <h4 class="reviews__author-name">Олег Петров</h4>
-            <span class="reviews__author-info">25 лет, водитель трамвая</span>
-            <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-            </blockquote>
-            <div class="slider__buttons slider__buttons--reviews">
-              <button class="slider__toggle slider__toggle--1 slider__toggle--current" type="button"></button>
-              <button class="slider__toggle slider__toggle--2" type="button"></button>
-              <button class="slider__toggle slider__toggle--3" type="button"></button>
-            </div>
-          </div>
+        <h2 class="visually-hidden">Отзывы пользователей</h2>
+        <div class="reviews__list slider__list">
+          <blockquote class="reviews__item reviews__item--1 reviews__item--active">
+          <h4 class="reviews__author-name">Николай Петров</h4>
+          <span class="reviews__author-info">25 лет, водитель трамвая</span>
+          <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </blockquote>
+          <blockquote class="reviews__item reviews__item--2">
+          <h4 class="reviews__author-name">Петр Николаев</h4>
+          <span class="reviews__author-info">25 лет, водитель трамвая</span>
+          <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </blockquote>
+          <blockquote class="reviews__item reviews__item--3">
+          <h4 class="reviews__author-name">Олег Петров</h4>
+          <span class="reviews__author-info">25 лет, водитель трамвая</span>
+          <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </blockquote>
+        <div class="slider__buttons slider__buttons--reviews">
+            <button class="slider__toggle slider__toggle--1 slider__toggle--current" type="button"></button>
+            <button class="slider__toggle slider__toggle--2" type="button"></button>
+            <button class="slider__toggle slider__toggle--3" type="button"></button>
+        </div>
+          <button class="slider__toggle-desktop slider__toggle-desktop--1" type="button"></button>
+          <button class="slider__toggle-desktop slider__toggle-desktop--2" type="button"></button>
         </div>
         </section>
         <div class="price__wrapper">
@@ -197,7 +193,7 @@
                 </tr>
               </tbody>
             </table>
-            <div class="slider__buttons">
+            <div class="slider__buttons slider__buttons--price">
               <button class="slider__toggle slider__toggle--current price__button--1" type="button"></button>
               <button class="slider__toggle price__button--2" type="button"></button>
               <button class="slider__toggle price__button--3" type="button"></button>

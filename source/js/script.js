@@ -13,48 +13,44 @@ let prisebtn3 = document.querySelector(".price__button--3");
 
 
 
-nav.classList.remove('main-nav--opened');
+nav.classList.remove("main-nav--opened");
 
 navtoggle.onclick = function() {
-  nav.classList.toggle('main-nav--opened');
-};
-
-navtoggle.onclick = function() {
-  nav.classList.toggle('main-nav--opened');
+  nav.classList.toggle("main-nav--opened");
 };
 
 sldidebtn2.onclick = function() {
-  itemslide2.classList.add('reviews__item--active');
-  itemslide1.classList.remove('reviews__item--active');
-  itemslide3.classList.remove('reviews__item--active');
+  itemslide2.classList.add("reviews__item--active");
+  itemslide1.classList.remove("reviews__item--active");
+  itemslide3.classList.remove("reviews__item--active");
 };
 
 sldidebtn3.onclick = function() {
-  itemslide3.classList.add('reviews__item--active');
-  itemslide1.classList.remove('reviews__item--active');
-  itemslide2.classList.remove('reviews__item--active');
+  itemslide3.classList.add("reviews__item--active");
+  itemslide1.classList.remove("reviews__item--active");
+  itemslide2.classList.remove("reviews__item--active");
 };
 
 sldidebtn1.onclick = function() {
-  itemslide1.classList.add('reviews__item--active');
-  itemslide2.classList.remove('reviews__item--active');
-  itemslide3.classList.remove('reviews__item--active');
+  itemslide1.classList.add("reviews__item--active");
+  itemslide2.classList.remove("reviews__item--active");
+  itemslide3.classList.remove("reviews__item--active");
 };
 
 prisebtn1.onclick = function() {
-  price.classList.add('price__list--base');
-  price.classList.remove('price__list--standart');
-  price.classList.remove('price__list--no-limit');
+  price.classList.add("price__list--base");
+  price.classList.remove("price__list--standart");
+  price.classList.remove("price__list--no-limit");
 };
 
 prisebtn2.onclick = function() {
-  price.classList.add('price__list--standart');
-  price.classList.remove('price__list--base');
-  price.classList.remove('price__list--no-limit');
+  price.classList.add("price__list--standart");
+  price.classList.remove("price__list--base");
+  price.classList.remove("price__list--no-limit");
 };
 
 prisebtn3.onclick = function() {
-  price.classList.add('price__list--no-limit');
-  price.classList.remove('price__list--base');
-  price.classList.remove('price__list--standart');
+  price.classList.add("price__list--no-limit");
+  price.classList.remove("price__list--base");
+  price.classList.remove("price__list--standart");
 };

@@ -115,12 +115,18 @@
 
   &--submit {
     margin-top: 44px;
+    margin-bottom: -17px;
 
     @media (min-width: @tablet-width) {
       order: 8;
       display: flex;
       justify-content: space-between;
       margin-top: 65px;
+      margin-bottom: 48px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 2px;
     }
   }
 
@@ -287,7 +293,7 @@
 
 .user-form__text-of-the-letter {
   font-size: 18px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   line-height: 30px;
   width: 254px;
   height: 182px;
