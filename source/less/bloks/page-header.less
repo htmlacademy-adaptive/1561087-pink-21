@@ -5,8 +5,8 @@
   background: url("../img/back-mobile.png") no-repeat 50% /cover, #1d2631;
 
   @media (min-resolution: 2dppx) {
-      background: url("../img/back-mobile@2x.png")no-repeat 50% /cover;
-    }
+    background: url("../img/back-mobile@2x.png") no-repeat 50% /cover;
+  }
 
   &--index {
     min-height: 729px;
@@ -17,19 +17,70 @@
     background: url("../img/back-tablet.png") no-repeat 50% /cover, #1d2631;
 
     @media (min-resolution: 2dppx) {
-        background: url("../img/back-tablet@2x.png")no-repeat 50% /cover;
-      }
+      background: url("../img/back-tablet@2x.png") no-repeat 50% /cover;
+    }
   }
-
-
 
   @media (min-width: @desktop-width) {
     min-height: 394px;
     background: url("../img/back-desktop.png") no-repeat 50% /cover, #1d2631;
 
     @media (min-resolution: 2dppx) {
-      background: url("../img/back-desktop@2x.png")no-repeat 50% /cover;
+      background: url("../img/back-desktop@2x.png") no-repeat 50% /cover;
     }
+  }
+}
+
+.page-header__logotype-mobile {
+  &:hover {
+    fill: #d22856;
+  }
+
+  &:active {
+    fill: #ffffff;
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__logotype-tablet {
+  display: none;
+
+  &:hover {
+    fill: #d22856;
+  }
+
+  &:active {
+    fill: #ffffff;
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.page-header__logotype-desktop {
+  display: none;
+
+  &:hover {
+    fill: #d22856;
+  }
+
+  &:active {
+    fill: #ffffff;
+    opacity: 0.3;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
   }
 }
 
@@ -134,9 +185,11 @@
 
 .page-header__logo {
   margin-top: 7px;
+
   @media (min-width: @tablet-width) {
     margin-top: -12px;
   }
+
   @media (min-width: @desktop-width) {
     margin-top: 24px;
   }
