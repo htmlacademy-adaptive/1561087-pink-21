@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page__body">
     <svg style="display: none">
@@ -36,13 +35,14 @@
     <header class="page-header">
         <div class="page-header__head">
           <div class="page-header__head-wrapper">
-            <nav class="main-nav main-nav--closed">
+            <nav class="main-nav">
               <div class="main-nav__list">
-                <p class="main-nav__item main-nav__item--logo"><a class="logo" href="#">
+                <p class="main-nav__item main-nav__item--logo">
+                  <a class="page-header__logo" href="#">
                   <picture>
                     <source media="(min-width: 1200px)" srcset="img/logotype-white-desktop.svg">
                     <source media="(min-width: 660px)" srcset="img/logotype-white-tablet.svg" height="40">
-                    <img class="logo" src="img/logo.svg" alt="логотип сайта pink">
+                    <img src="img/logo.svg" alt="логотип сайта pink">
                   </picture>
                 </a>
                 <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -169,14 +169,14 @@
               <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
                 <svg class="application__item-facebook" width="9" height="18">
                   <use xlink:href="#icon-facebook"></use>
-               </svg>
+                </svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
                 <svg class="application__item-youtube" width="15" height="13">
                   <use xlink:href="#icon-youtube"></use>
-               </svg>
+                </svg>
               </a>
             </li>
           </ul>
@@ -186,7 +186,7 @@
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <svg class="application__item-academy" width="27" height="34"  fill="#d22856">
               <use xlink:href="#icon-academy"></use>
-           </svg>
+            </svg>
           </a>
         </div>
       </div>
@@ -205,5 +205,6 @@
         <a class="modal__button" type="reset">закрыть окно</a>
       </div>
     </div>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

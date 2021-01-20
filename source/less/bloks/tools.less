@@ -24,8 +24,8 @@
     display: flex;
     flex-direction: column;
     text-align: left;
-    margin-left: 35px;
-    margin-top: 9px;
+    margin-left: 30px;
+    margin-top: 13px;
     margin-bottom: 29px;
   }
 
@@ -49,7 +49,8 @@
   &--size {
     @media (min-width: @tablet-width) {
       margin-left: 0;
-      top: -12px;
+      top: -15px;
+      left: 5px;
     }
 
     @media (min-width: @desktop-width) {
@@ -60,7 +61,8 @@
   &--color {
     @media (min-width: @tablet-width) {
       margin-left: 0;
-      top: 68px;
+      top: 60px;
+      left: 4px;
     }
 
     @media (min-width: @desktop-width) {
@@ -70,8 +72,9 @@
 
   &--shadow {
     @media (min-width: @tablet-width) {
-      margin-left: 0;
-      top: 155px;
+      margin-left: 3px;
+      top: 134px;
+      left: 4px;
     }
 
     @media (min-width: @desktop-width) {
@@ -84,7 +87,6 @@
 .tools__changes-icon {
   fill: #283645;
   opacity: 0.3;
-  width: 24px;
 
 
   &--active {
@@ -95,6 +97,34 @@
   &:hover {
     opacity: 0.5;
   }
+
+  @media (min-width: @tablet-width) {
+    &--size {
+      width: 22px;
+    }
+
+    &--color {
+      width: 24px;
+    }
+
+    &--shadow {
+      width: 16px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--size {
+      width: 44px;
+    }
+
+    &--color {
+      width: 48px;
+    }
+
+    &--shadow {
+      width: 32px;
+    }
+  }
 }
 
 .tools__changes-icon--active:hover {
@@ -102,6 +132,10 @@
 }
 
 .tools__buttons {
+  @media (min-width: @tablet-width) {
+    margin-top: 34px;
+  }
+
   @media (min-width: @desktop-width) {
     display: flex;
     margin-top: 104px;
@@ -133,6 +167,10 @@
     color: rgba(255, 255, 255, 0.3);
   }
 
+  @media (min-width: @tablet-width) {
+    width: 260px;
+  }
+
   @media (min-width: @desktop-width) {
     width: 183px;
     margin-left: 0;
@@ -144,6 +182,10 @@
     border: 3px solid #283645;
     opacity: 0.1;
     line-height: 50px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 24px;
+    }
 
     &:hover {
       color: #283645;
@@ -159,6 +201,7 @@
 
     @media (min-width: @desktop-width) {
       margin-left: 10px;
+      margin-top: 10px;
     }
   }
 }

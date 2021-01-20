@@ -4,6 +4,10 @@
   margin-bottom: 41px;
   background: url("../img/back-mobile.png") no-repeat 50% /cover, #1d2631;
 
+  @media (min-resolution: 2dppx) {
+    background: url("../img/back-mobile@2x.png") no-repeat 50% /cover;
+  }
+
   &--index {
     min-height: 729px;
   }
@@ -11,11 +15,72 @@
   @media (min-width: @tablet-width) {
     min-height: 440px;
     background: url("../img/back-tablet.png") no-repeat 50% /cover, #1d2631;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/back-tablet@2x.png") no-repeat 50% /cover;
+    }
   }
 
   @media (min-width: @desktop-width) {
     min-height: 394px;
     background: url("../img/back-desktop.png") no-repeat 50% /cover, #1d2631;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/back-desktop@2x.png") no-repeat 50% /cover;
+    }
+  }
+}
+
+.page-header__logotype-mobile {
+  &:hover {
+    fill: #d22856;
+  }
+
+  &:active {
+    fill: #ffffff;
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__logotype-tablet {
+  display: none;
+
+  &:hover {
+    fill: #d22856;
+  }
+
+  &:active {
+    fill: #ffffff;
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.page-header__logotype-desktop {
+  display: none;
+
+  &:hover {
+    fill: #d22856;
+  }
+
+  &:active {
+    fill: #ffffff;
+    opacity: 0.3;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
   }
 }
 
@@ -50,7 +115,7 @@
     font-size: 50px;
     line-height: 68px;
     width: 360px;
-    margin-top: 60px;
+    margin-top: 73px;
   }
 
   &--form {
@@ -87,12 +152,22 @@
   margin-right: auto;
   margin-left: auto;
 
+  @media (min-resolution: 2dppx) {
+    background: url("../img/phone-in-hand@2x.png") no-repeat 50% 24%;
+    background-size: 320px auto;
+  }
+
   @media (min-width: @tablet-width) {
     margin-top: 50px;
     padding-top: 20px;
     padding-bottom: 80px;
     background: url("../img/phone-in-hand-tablet.png") no-repeat 45% 100%;
     .wrap ();
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/phone-in-hand-tablet@2x.png") no-repeat 45% 100%;
+      background-size: 660px auto;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -100,5 +175,22 @@
     padding-bottom: 88px;
     margin-top: 55px;
     background: url("../img/phone-in-hand-desktop.png") no-repeat -14% 100%;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/phone-in-hand-desktop@2x.png") no-repeat -14% 100%;
+      background-size: 1050px auto;
+    }
+  }
+}
+
+.page-header__logo {
+  margin-top: 7px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -12px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 24px;
   }
 }

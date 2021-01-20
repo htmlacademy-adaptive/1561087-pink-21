@@ -1,6 +1,6 @@
 .reviews {
   margin-top: 43px;
-  margin-bottom: 33px;
+  margin-bottom: 38px;
   .wrap();
   position: relative;
 
@@ -77,11 +77,16 @@
 }
 
 .reviews__item {
-  display: flex;
+  display: none;
+  flex-direction: column;
   justify-content: center;
   margin: 0;
   padding: 0;
   max-width: 688px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.reviews__item--active {
+  display: flex;
 }

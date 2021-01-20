@@ -1,13 +1,17 @@
 .filter-input-radio + label::before {
   content: "";
   position: absolute;
-  left: 9px;
+  left: 0;
   top: -8px;
   width: 37px;
   height: 37px;
   border: 2px solid #e5e5e5;
   border-radius: 50px;
   background: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    left: 10px;
+  }
 
   @media (min-width: @desktop-width) {
     left: 24px;
@@ -18,11 +22,15 @@
   content: "";
   position: absolute;
   top: 5px;
-  left: 22px;
+  left: 13px;
   width: 15px;
   height: 15px;
   background-color: #d22856;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    left: 23px;
+  }
 
   @media (min-width: @desktop-width) {
     left: 37px;
@@ -35,4 +43,8 @@
 
 .filter-input-radio:active + label::before {
   border: 2px solid #d22856;
+}
+
+.filter-input-radio:focus + label::before {
+  border-color: #d22856;
 }

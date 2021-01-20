@@ -1,11 +1,19 @@
 .slider__buttons {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 14px;
   align-items: center;
+
+  &--price {
+    margin-top: 41px;
+  }
 
   @media (min-width: @tablet-width) {
     margin-top: 42px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
   }
 }
 
@@ -41,11 +49,26 @@
   margin-right: 19px;
 }
 
-.slider__item {
+.slider__toggle-desktop {
   display: none;
-}
+  position: absolute;
+  width: 22px;
+  height: 41px;
+  top: 151px;
+  left: 0;
+  background: 0;
+  background-image: url("../img/left-arrow.svg");
+  border: 0;
+  outline: none;
+  cursor: pointer;
 
-.slider__item--active {
-  display: flex;
-  flex-direction: column;
+  &--2 {
+    top: 151px;
+    left: 918px;
+    transform: rotate(-180deg);
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
 }
