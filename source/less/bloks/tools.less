@@ -1,24 +1,8 @@
 .tools {
-  text-align: center;
+  margin-bottom: 0;
+  position: relative;
   margin-top: 38px;
   padding-bottom: 43px;
-
-  @media (min-width: @tablet-width) {
-    margin-top: 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-bottom: 57px;
-  }
-}
-
-.tools button {
-  background: none;
-}
-
-.tools__changes {
-  margin-bottom: 110px;
-  position: relative;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -38,8 +22,8 @@
 .tools__changes-item {
   display: inline-block;
   vertical-align: middle;
-  margin-left: 9px;
-  margin-right: 22px;
+  margin-left: 10px;
+  margin-right: 24px;
   cursor: pointer;
 
   @media (min-width: @tablet-width) {
@@ -55,6 +39,7 @@
 
     @media (min-width: @desktop-width) {
       top: -15px;
+      left: 0;
     }
   }
 
@@ -67,6 +52,7 @@
 
     @media (min-width: @desktop-width) {
       top: 58px;
+      left: 0;
     }
   }
 
@@ -78,8 +64,8 @@
     }
 
     @media (min-width: @desktop-width) {
-      top: 133px;
-      left: 6px;
+      top: 134px;
+      left: 3px;
     }
   }
 }
@@ -88,17 +74,24 @@
   fill: #283645;
   opacity: 0.3;
 
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    fill: #d22856;
+    opacity: 1;
+  }
 
   &--active {
     fill: #d22856;
     opacity: 1;
   }
 
-  &:hover {
-    opacity: 0.5;
-  }
-
   @media (min-width: @tablet-width) {
+    fill: #d22856;
+    opacity: 1;
+
     &--size {
       width: 22px;
     }
@@ -127,23 +120,27 @@
   }
 }
 
-.tools__changes-icon--active:hover {
-  opacity: 1;
-}
-
 .tools__buttons {
+  margin-top: 110px;
+  margin-left: auto;
+  margin-right: auto;
+
   @media (min-width: @tablet-width) {
     margin-top: 34px;
+    position: absolute;
+    top: 209px;
+    left: 3px;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
-    margin-top: 104px;
+    margin-top: 112px;
+    left: 0;
   }
 }
 
 .tools__button {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   margin: 0 auto;
   font-size: 18px;
   font-weight: 700;
@@ -165,6 +162,7 @@
 
   &:active {
     color: rgba(255, 255, 255, 0.3);
+    background: #d22856;
   }
 
   @media (min-width: @tablet-width) {
@@ -177,11 +175,12 @@
     margin-right: 34px;
   }
 
-  &--cancel {
+  &--cancell {
     color: #283645;
     border: 3px solid #283645;
     opacity: 0.1;
     line-height: 50px;
+    text-decoration: none;
 
     @media (min-width: @tablet-width) {
       margin-top: 24px;
@@ -202,6 +201,116 @@
     @media (min-width: @desktop-width) {
       margin-left: 10px;
       margin-top: 10px;
+    }
+  }
+}
+
+.tools__changes-controls-bar {
+  height: 2px;
+  background: black;
+}
+
+.tools__changes-controls-toggle {
+  position: absolute;
+  cursor: pointer;
+  width: 10px;
+  height: 16px;
+  top: -7px;
+  left: 24%;
+  background-color: #f2f2f2;
+  border: 2px solid #cd2856;
+  border-radius: 50%;
+
+  &:active {
+    background-color: #cd2856;
+  }
+
+  &--color {
+    left: 85%;
+  }
+
+  &--shadow {
+    left: 55%;
+  }
+}
+
+.tools__changes-controls {
+  position: absolute;
+  display: none;
+  margin: 0;
+  top: 42px;
+  left: 0;
+  width: 100%;
+  height: 14px;
+  margin-top: 35px;
+  margin-bottom: 38px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #dddfe0;
+
+  &--active {
+    display: block;
+  }
+
+  &--shadow {
+    @media (min-width: @desktop-width) {
+      margin-top: -3px;
+      border: 0;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    width: 275px;
+    top: 0;
+    margin-top: 0;
+    margin-bottom: 29px;
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 30px;
+    width: 410px;
+  }
+}
+
+.tools__changes-controls-scale {
+  position: relative;
+  width: 240px;
+  box-sizing: border-box;
+  margin: 6px auto 0;
+  z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    width: 202px;
+    margin-left: 56px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 288px;
+    margin-left: 92px;
+  }
+}
+
+.tools__filter {
+  display: block;
+  width:100%;
+  height: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 34px;
+  appearance: none;
+  background-color: #283645;
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    background-color: white;
+    border: 2px solid #d22856;;
+    border-radius: 14px;
+
+    &:active {
+      background: #d22856;
     }
   }
 }

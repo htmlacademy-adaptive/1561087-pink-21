@@ -36,7 +36,7 @@
     max-width: 868px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 40px;
+    margin-top: 41px;
     justify-content: space-between;
   }
 }
@@ -87,6 +87,7 @@
 
   &:active {
     opacity: 0.3;
+    color: #283645;
     text-decoration: none;
   }
 
@@ -104,8 +105,24 @@
   display: inline-block;
   margin-bottom: 18px;
 
+  &--address {
+    margin-top: 3px;
+  }
+
   @media (min-width: @tablet-width) {
     width: 228px;
+
+    &--call {
+      margin-left: 11px;
+    }
+
+    &--email {
+      margin-right: 18px;
+    }
+
+    &--email p {
+      margin-left: 13px;
+    }
 
     &--address {
       margin-top: 24px;
@@ -115,14 +132,17 @@
   @media (min-width: @desktop-width) {
     &--call {
       order: 1;
+      margin-left: 0;
     }
 
     &--email {
       order: 3;
+      margin-right: 7px;
     }
 
     &--address {
       margin-top: 0;
+      margin-left: 5px;
       order: 2;
     }
   }
@@ -132,21 +152,46 @@
   display: block;
   position: relative;
   overflow: hidden;
-  margin-top: 18px;
+  margin-top: 15px;
+  background: url("../img/map.png") no-repeat;
+  background-size: cover;
 
   @media (min-width: @tablet-width) {
     margin-top: 5px;
+    background: url("../img/map-tablet.png") no-repeat;
+    background-size: cover;
   }
 
   @media (min-width: @desktop-width) {
     margin-top: 2px;
+    background: url("../img/map-desktop.png") no-repeat;
+    background-size: cover;
+  }
+
+}
+
+.page-footer__map-iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  outline: 0;
+  display: block;
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width: @tablet-width) {
+    height: 374px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 501px;
   }
 
   &::before {
     content: "";
     width: 100%;
     height: 100%;
-    top: -171px;
+    top: -169px;
     left: 0;
     position: absolute;
     background: url("../img/triangle.svg") no-repeat 50%;
@@ -164,21 +209,6 @@
   }
 }
 
-.page-footer__map iframe {
-  border: none;
-  outline: 0;
-  display: block;
-  position: relative;
-
-  @media (min-width: @tablet-width) {
-    height: 374px;
-  }
-
-  @media (min-width: @desktop-width) {
-    height: 501px;
-  }
-}
-
 .page-footer__wrapper {
   text-align: center;
   .wrap();
@@ -190,7 +220,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 52px;
+    margin-top: 56px;
   }
 }
 
