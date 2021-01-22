@@ -1,4 +1,4 @@
-.slider__buttons {
+.slider-buttons {
   display: flex;
   justify-content: center;
   margin-top: 14px;
@@ -6,6 +6,10 @@
 
   &--price {
     margin-top: 41px;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -17,7 +21,8 @@
   }
 }
 
-.slider__toggle {
+.slider__toggle,
+.price__toggle {
   padding: 0;
   width: 6px;
   height: 6px;
@@ -45,22 +50,19 @@
   }
 }
 
-.slider__toggle:not(:last-child) {
+.slider__toggle:not(:last-child),
+.price__toggle:not(:last-child) {
   margin-right: 19px;
 }
 
 .slider__toggle-desktop {
   display: none;
   position: absolute;
-  width: 22px;
-  height: 41px;
   top: 151px;
   left: 0;
-  background: 0;
-  background-image: url("../img/left-arrow.svg");
   border: 0;
-  outline: none;
   cursor: pointer;
+  background: 0;
 
   &--2 {
     top: 151px;
@@ -70,5 +72,18 @@
 
   @media (min-width: @desktop-width) {
     display: block;
+  }
+}
+
+.slider__toggle-icon {
+  fill: #283645;
+  opacity: 0.3;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
   }
 }

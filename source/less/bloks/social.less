@@ -7,13 +7,17 @@
   list-style: none;
   justify-content: center;
   padding: 0;
+
+  @media (min-width: @desktop-width) {
+    margin-left: 6px;
+  }
 }
 
 .social__link {
   display: block;
   width: 48px;
   height: 48px;
-  line-height: 52px;
+  line-height: 54px;
   border: 3px solid rgba(40, 54, 69, 0.1);
   border-radius: 50%;
   text-align: center;
@@ -28,5 +32,5 @@
 }
 
 .social__item:not(:last-child) {
-  margin-right: 10px;
+  margin-right: 8px;
 }

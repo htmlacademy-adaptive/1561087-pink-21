@@ -93,9 +93,13 @@
   justify-content: space-between;
   .wrap();
   flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    height: 110px;
+  }
 }
 
-.page-header-title {
+.page-header__title {
   max-width: 280px;
   font-weight: 300;
   font-size: 24px;
@@ -103,32 +107,41 @@
   text-align: center;
   margin: 0 auto;
   margin-top: 28px;
+  margin-bottom: 74px;
 
   @media (min-width: @tablet-width) {
     .wrap();
     font-size: 50px;
     line-height: 68px;
     margin-top: 67px;
+    margin-bottom: 127px;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 50px;
     line-height: 68px;
     width: 360px;
-    margin-top: 73px;
+    margin-top: 59px;
+    margin-bottom: 0;
   }
 
   &--form {
+    margin-bottom: 40px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 58px;
+    }
+
     @media (min-width: @desktop-width) {
       width: 800px;
-      margin-bottom: 91px;
+      margin-bottom: 89px;
     }
   }
 }
 
-.page-header-title--index {
+.page-header__title--index {
   line-height: 120%;
-  margin-top: 26px;
+  margin-top: 24px;
 
   @media (min-width: @tablet-width) {
     margin-left: 26px;
@@ -138,16 +151,18 @@
     font-size: 40px;
     font-weight: 300;
     line-height: 120%;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 50px;
     line-height: 68px;
     margin-bottom: 42px;
+    margin-top: 29px;
   }
 }
 
-.page-header__wrapper--tablet {
+.page-header__wrapper-tablet {
   background: url("../img/phone-in-hand.png") no-repeat 50% 24%;
   margin-right: auto;
   margin-left: auto;
@@ -172,8 +187,8 @@
 
   @media (min-width: @desktop-width) {
     .wrap ();
-    padding-bottom: 88px;
-    margin-top: 55px;
+    padding-bottom: 87px;
+    margin-top: 63px;
     background: url("../img/phone-in-hand-desktop.png") no-repeat -14% 100%;
 
     @media (min-resolution: 2dppx) {
@@ -184,7 +199,7 @@
 }
 
 .page-header__logo {
-  margin-top: 7px;
+  margin-top: 14px;
 
   @media (min-width: @tablet-width) {
     margin-top: -12px;

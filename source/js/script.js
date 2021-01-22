@@ -7,9 +7,9 @@ let sldidebtn1 = document.querySelector(".slider__toggle--1");
 let sldidebtn2 = document.querySelector(".slider__toggle--2");
 let sldidebtn3 = document.querySelector(".slider__toggle--3");
 let price = document.querySelector(".price__list");
-let prisebtn1 = document.querySelector(".price__button--1");
-let prisebtn2 = document.querySelector(".price__button--2");
-let prisebtn3 = document.querySelector(".price__button--3");
+let prisebtn1 = document.querySelector(".price__toggle--1");
+let prisebtn2 = document.querySelector(".price__toggle--2");
+let prisebtn3 = document.querySelector(".price__toggle--3");
 
 
 
