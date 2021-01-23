@@ -17,7 +17,7 @@
   margin-top: 113px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 80px;
+    margin-top: 92px;
     padding-bottom: 7px;
   }
 }
@@ -37,10 +37,10 @@
 
   @media (min-width: @tablet-width) {
     transform: rotate(-5deg);
-    top: -19px;
+    top: -37px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     top: -63px;
   }
 }
@@ -56,7 +56,7 @@
     margin-left: 310px;
     text-align: left;
     max-width: 307px;
-    margin-top: 12px;
+    margin-top: 0;
     margin-bottom: 34px;
   }
 
@@ -212,6 +212,12 @@
 }
 
 .about-application__content br {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+
   @media (min-width: @desktop-width) {
     display: none;
   }
